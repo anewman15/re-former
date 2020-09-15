@@ -13,6 +13,7 @@
 </form>
 <% end %>
 
+<% if false %>
 <%= form_tag( controller: "users", action: "create", method: "post") do %>
   <%= label_tag(:username, "Username") %>
   <%= text_field_tag(:username) %>
@@ -21,4 +22,15 @@
   <%= label_tag(:password, "Choose a password") %>
   <%= password_field_tag(:password) %>
   <%= submit_tag("Create User") %>
+<% end %>
+<% end %>
+
+<%= form_for @user, url: { action: 'create'} do |f| %>
+  <%= f.label(:username, "Choose a username") %>
+  <%= f.text_field :username %>
+  <%= f.label(:email, "Email") %>
+  <%= f.email_field :email %>
+  <%= f.label(:password, "Choose a password") %>
+  <%= f.password_field :password %>
+  <%= f.submit "Create User" %>
 <% end %>
