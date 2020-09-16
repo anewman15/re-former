@@ -25,7 +25,7 @@ Simple rails app involving forms to create and edit users.
 8. Try creating more valid users without keeping a field empty
 
 ## Edit Users
-9. Enter `localhost:3000/:id/edit`
+9. Enter `localhost:3000/users/:id/edit`
 10. You'll be presented with the same form with the pre-existing values and an `Update User` button
 11. Change the fields with a valid value and you'll notice the edit form is updated accordingly
 12. If you submit with an empty field, it will not update the record and show the errors below
